@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: "Practice"
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dvdrental
+    driver-class-name: org.postgresql.Driver
+    username: apple
+    password:
+  jpa:
+    database: POSTGRESQL
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyJpaImpl
+    show-sql: true
+server:
+  servlet:
+    context-path: /api
