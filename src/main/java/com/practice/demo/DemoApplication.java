@@ -1,7 +1,5 @@
 package com.practice.demo;
 
-import com.practice.demo.enums.Status;
-import com.practice.demo.models.Actor;
 import com.practice.demo.repositories.ActorRepository;
 import lombok.extern.java.Log;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,10 +32,8 @@ public class DemoApplication implements CommandLineRunner {
     }
 
     protected void performDBOperations() {
-        Actor actor = Actor.builder().age(35).email("test@test.com").build();
-        actor.setStatus(Status.ACTIVE);
-        actorRepository.save(actor);
-
-
+//        Actor actor = Actor.builder().age(35).email("test@test.com").build();
+//        actor.setStatus(Status.ACTIVE);
+//        actorRepository.save(actor);
     }
 }

@@ -5,6 +5,7 @@ import com.practice.demo.enums.Status;
 import com.practice.demo.services.ActorService;
 import com.practice.demo.models.Actor;
 import jakarta.validation.Valid;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -26,7 +27,7 @@ public class ActorController {
     }
 
     @PostMapping("")
-    public Actor createActor(@RequestBody @Valid ActorDTO actorDTO) {
+    public Actor createActor(@RequestBody @Validated ActorDTO actorDTO) {
         var actor = new Actor();
         actor.setEmail(actorDTO.getEmail());
         actor.setName(actorDTO.getName());
