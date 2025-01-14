@@ -1,5 +1,6 @@
 package com.practice.demo.models;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIdentityInfo;
 import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import jakarta.persistence.*;
@@ -33,8 +34,9 @@ public class Film implements Serializable {
 
     @ManyToOne()
     @JoinColumn(name = "director_id")
-//    @JsonBackReference
-    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
+//    @OrderBy("name")
+    @JsonBackReference
+//    @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
     private Director director;
 
     private Integer length;

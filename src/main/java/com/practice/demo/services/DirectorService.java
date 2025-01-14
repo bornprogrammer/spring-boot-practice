@@ -2,6 +2,7 @@ package com.practice.demo.services;
 
 import com.practice.demo.models.Director;
 import com.practice.demo.repositories.DirectorRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -2,6 +2,7 @@ package com.practice.demo.controllers;
 
 import com.practice.demo.models.Director;
 import com.practice.demo.services.DirectorService;
+import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,7 +23,8 @@ public class DirectorController {
     }
 
     @GetMapping("")
-    public List<Director> getDirectors() {
+    public List<Director> getDirectors(HttpServletRequest request) {
+        System.out.println(request.getHeader("Authorization"));
         return this.directorService.getDirectors();
     }
 

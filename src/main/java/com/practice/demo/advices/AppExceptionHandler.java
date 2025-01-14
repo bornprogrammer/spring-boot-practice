@@ -15,6 +15,7 @@ public class AppExceptionHandler {
 
     @ExceptionHandler(Exception.class)
     public ResponseEntity<?> handleMethodArgumentNotValidException(Exception ex) {
+//        return new ResponseEntity<String>(ex.getMessage(), HttpStatus.BAD_REQUEST);
         return new ResponseEntity<String>(ex.getMessage(), HttpStatus.BAD_REQUEST);
     }
 

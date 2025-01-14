@@ -19,7 +19,7 @@ public class ActorService {
         this.actorRepository = actorRepository;
     }
 
-    public Actor createActor(Actor actor) {
+    public Actor createActor(final Actor actor) {
         var createdActor = this.actorRepository.save(actor);
         return createdActor;
     }

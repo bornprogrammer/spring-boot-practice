@@ -4,12 +4,10 @@ import com.practice.demo.dtos.ActorDTO;
 import com.practice.demo.enums.Status;
 import com.practice.demo.services.ActorService;
 import com.practice.demo.models.Actor;
-import jakarta.validation.Valid;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Optional;
 
 @RestController()
 @RequestMapping("/actors")

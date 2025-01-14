@@ -1,6 +1,6 @@
 spring:
   application:
-    name: "Practice"
+    name: "Auth server"
   datasource:
     url: jdbc:postgresql://localhost:5432/dvdrental
     driver-class-name: org.postgresql.Driver
@@ -17,3 +17,4 @@ spring:
 server:
   servlet:
     context-path: /api
+  port: 8080
